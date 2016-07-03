@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220512C31D28C171002A45B4 /* XMGFriendTrendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220512C21D28C171002A45B4 /* XMGFriendTrendController.m */; };
+		220513111D290165002A45B4 /* UIBarButtonItem+item.m in Sources */ = {isa = PBXBuildFile; fileRef = 220513101D290165002A45B4 /* UIBarButtonItem+item.m */; };
 		22E14C3E1D27E8A700AADFED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E14C3D1D27E8A700AADFED /* main.m */; };
 		22E14C411D27E8A700AADFED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E14C401D27E8A700AADFED /* AppDelegate.m */; };
 		22E14C491D27E8A700AADFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E14C481D27E8A700AADFED /* Assets.xcassets */; };
@@ -15,11 +17,14 @@
 		22E14C7E1D282ECE00AADFED /* XMGEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E14C7D1D282ECE00AADFED /* XMGEssenceController.m */; };
 		22E14C811D282EEA00AADFED /* XMGNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E14C801D282EEA00AADFED /* XMGNewController.m */; };
 		22E14C841D282F0500AADFED /* XMGPublishController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E14C831D282F0500AADFED /* XMGPublishController.m */; };
-		22E14C871D282F2000AADFED /* XMGFriendTrendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E14C861D282F2000AADFED /* XMGFriendTrendController.m */; };
 		22E14C8D1D282F9C00AADFED /* XMGMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E14C8C1D282F9C00AADFED /* XMGMineController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220512C11D28C171002A45B4 /* XMGFriendTrendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendController.h; sourceTree = "<group>"; };
+		220512C21D28C171002A45B4 /* XMGFriendTrendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFriendTrendController.m; sourceTree = "<group>"; };
+		2205130F1D290165002A45B4 /* UIBarButtonItem+item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+item.h"; sourceTree = "<group>"; };
+		220513101D290165002A45B4 /* UIBarButtonItem+item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+item.m"; sourceTree = "<group>"; };
 		22E14C391D27E8A700AADFED /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E14C3D1D27E8A700AADFED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22E14C3F1D27E8A700AADFED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,8 +41,6 @@
 		22E14C801D282EEA00AADFED /* XMGNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewController.m; sourceTree = "<group>"; };
 		22E14C821D282F0500AADFED /* XMGPublishController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPublishController.h; sourceTree = "<group>"; };
 		22E14C831D282F0500AADFED /* XMGPublishController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPublishController.m; sourceTree = "<group>"; };
-		22E14C851D282F2000AADFED /* XMGFriendTrendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendController.h; sourceTree = "<group>"; };
-		22E14C861D282F2000AADFED /* XMGFriendTrendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFriendTrendController.m; sourceTree = "<group>"; };
 		22E14C8B1D282F9C00AADFED /* XMGMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMineController.h; sourceTree = "<group>"; };
 		22E14C8C1D282F9C00AADFED /* XMGMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMineController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,8 +153,8 @@
 		22E14C5D1D27EAF300AADFED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				22E14C851D282F2000AADFED /* XMGFriendTrendController.h */,
-				22E14C861D282F2000AADFED /* XMGFriendTrendController.m */,
+				220512C11D28C171002A45B4 /* XMGFriendTrendController.h */,
+				220512C21D28C171002A45B4 /* XMGFriendTrendController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -316,6 +319,8 @@
 			children = (
 				22E14C791D27F6F900AADFED /* UIImage+image.h */,
 				22E14C7A1D27F6F900AADFED /* UIImage+image.m */,
+				2205130F1D290165002A45B4 /* UIBarButtonItem+item.h */,
+				220513101D290165002A45B4 /* UIBarButtonItem+item.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -391,7 +396,8 @@
 			files = (
 				22E14C761D27ED0400AADFED /* XMGTabBarController.m in Sources */,
 				22E14C841D282F0500AADFED /* XMGPublishController.m in Sources */,
-				22E14C871D282F2000AADFED /* XMGFriendTrendController.m in Sources */,
+				220512C31D28C171002A45B4 /* XMGFriendTrendController.m in Sources */,
+				220513111D290165002A45B4 /* UIBarButtonItem+item.m in Sources */,
 				22E14C8D1D282F9C00AADFED /* XMGMineController.m in Sources */,
 				22E14C7B1D27F6F900AADFED /* UIImage+image.m in Sources */,
 				22E14C411D27E8A700AADFED /* AppDelegate.m in Sources */,
@@ -531,6 +537,7 @@
 				22E14C521D27E8A700AADFED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

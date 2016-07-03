@@ -9,6 +9,9 @@
 #import "XMGTabBarController.h"
 #import "UIImage+image.h"
 #import "XMGEssenceController.h"
+#import "XMGNewController.h"
+#import "XMGFriendTrendController.h"
+#import "XMGMineController.h"
 
 @interface XMGTabBarController ()
 
@@ -23,14 +26,16 @@
 }
 
 
+
+
 - (void)setUpChildVC {
     
-    UIViewController *VC1 = [[UIViewController alloc] init];
+    XMGEssenceController *VC1 = [[XMGEssenceController alloc] init];
     VC1.view.backgroundColor = [UIColor cyanColor];
     UINavigationController *naVC1 = [[UINavigationController alloc] initWithRootViewController:VC1];
     [self addChildViewController:naVC1];
     
-    UIViewController *VC2 = [[UIViewController alloc] init];
+    XMGNewController *VC2 = [[XMGNewController alloc] init];
     VC2.view.backgroundColor = [UIColor yellowColor];
     UINavigationController *naVC2 = [[UINavigationController alloc] initWithRootViewController:VC2];
     [self addChildViewController:naVC2];
@@ -39,12 +44,12 @@
     VC3.view.backgroundColor = [UIColor blueColor];
     [self addChildViewController:VC3];
     
-    UIViewController *VC4 = [[UIViewController alloc] init];
+    XMGFriendTrendController *VC4 = [[XMGFriendTrendController alloc] init];
     VC4.view.backgroundColor = [UIColor grayColor];
     UINavigationController *naVC4 = [[UINavigationController alloc] initWithRootViewController:VC4];
     [self addChildViewController:naVC4];
     
-    UIViewController *VC5 = [[UIViewController alloc] init];
+    XMGMineController *VC5 = [[XMGMineController alloc] init];
     VC5.view.backgroundColor = [UIColor purpleColor];
     UINavigationController *naVC5 = [[UINavigationController alloc] initWithRootViewController:VC5];
     [self addChildViewController:naVC5];
