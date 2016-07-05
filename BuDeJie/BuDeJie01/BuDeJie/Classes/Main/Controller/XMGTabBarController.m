@@ -33,7 +33,7 @@
     if (!_pulsBtn){
         UIButton *pulsBtn = [[UIButton alloc] init];
         [pulsBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
-        [pulsBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateSelected];
+        [pulsBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
         [pulsBtn sizeToFit];
         [self.tabBar addSubview:pulsBtn];
         self.pulsBtn = pulsBtn;
@@ -111,9 +111,10 @@
     
     
     UIViewController *childVC3 = self.childViewControllers[2];
-    childVC3.tabBarItem.image = [UIImage imageNameWithRenderAsOriginal:@"tabBar_publish_icon"];
-    childVC3.tabBarItem.selectedImage = [UIImage imageNameWithRenderAsOriginal:@"tabBar_publish_click_icon"];
-    childVC3.tabBarItem.imageInsets = UIEdgeInsetsMake(7, 0, -7, 0);
+//    childVC3.tabBarItem.image = [UIImage imageNameWithRenderAsOriginal:@"tabBar_publish_icon"];
+//    childVC3.tabBarItem.selectedImage = [UIImage imageNameWithRenderAsOriginal:@"tabBar_publish_click_icon"];
+    childVC3.tabBarItem.imageInsets = UIEdgeInsetsMake(3, 0, -3, 0);
+    childVC3.tabBarItem.enabled = NO;
     
     
     UIViewController *childVC4 = self.childViewControllers[3];
