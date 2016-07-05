@@ -7,6 +7,7 @@
 //
 
 #import "XMGFriendTrendController.h"
+#import "UIBarButtonItem+item.h"
 
 @implementation XMGFriendTrendController
 - (void)loadView {
@@ -17,14 +18,8 @@
 }
 
 - (void)setUpNavigationBar {
-    UIButton *friendsRecommentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [friendsRecommentBtn setImage:[UIImage imageNamed:@"friendsRecommentIcon"] forState:UIControlStateNormal];
-    [friendsRecommentBtn setImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] forState:UIControlStateHighlighted];
-    [friendsRecommentBtn sizeToFit];
-    [friendsRecommentBtn addTarget:self action:@selector(friendsRecommentBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    UIView *view = [[UIView alloc] initWithFrame:friendsRecommentBtn.bounds];
-    [view addSubview:friendsRecommentBtn];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"friendsRecommentIcon"] highImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] addTarget:self action:@selector(friendsRecommentBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)friendsRecommentBtnClick {
     NSLog(@"点击了friendsRecommentBtn");

@@ -15,6 +15,8 @@
 
 @interface XMGTabBarController ()
 
+@property (nonatomic, weak)UIButton *pulsBtn;
+
 @end
 
 @implementation XMGTabBarController
@@ -23,9 +25,48 @@
     [super viewDidLoad];
     [self setUpChildVC];
     [self setUpTabBar];
+    self.pulsBtn.center = CGPointMake(self.tabBar.frame.size.width * 0.5, self.tabBar.frame.size.height * 0.5);
+    
+}
+
+- (UIButton *)pulsBtn {
+    if (!_pulsBtn){
+        UIButton *pulsBtn = [[UIButton alloc] init];
+        [pulsBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
+        [pulsBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateSelected];
+        [pulsBtn sizeToFit];
+        [self.tabBar addSubview:pulsBtn];
+        self.pulsBtn = pulsBtn;
+    }
+    return _pulsBtn;
 }
 
 
++ (void)load {
+    UITabBarItem *item = [UITabBarItem appearance];
+    NSDictionary *dict = [NSDictionary dictionary];
+    dict = @{
+             NSFontAttributeName:[UIFont systemFontOfSize:13],
+             NSForegroundColorAttributeName:[UIColor blackColor]
+             };
+    [item setTitleTextAttributes:dict forState:UIControlStateNormal];
+    
+    
+    
+//    UITabBarItem *item = [UITabBarItem appearance];
+//    
+//    // 字典描述文字信息
+//    NSMutableDictionary *attr = [NSMutableDictionary dictionary];
+//    attr[NSForegroundColorAttributeName] = [UIColor blackColor];
+//    // 设置选中状态下文字颜色
+//    [item setTitleTextAttributes:attr forState:UIControlStateSelected];
+//    
+//    // Bug:在选中状态下设置文字字体不成功,应该在正常状态下去设置文字字体
+//    // 设置正常状态下文字字体
+//    NSMutableDictionary *attrNor = [NSMutableDictionary dictionary];
+//    attrNor[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+//    [item setTitleTextAttributes:attrNor forState:UIControlStateNormal];
+}
 
 
 - (void)setUpChildVC {
@@ -53,6 +94,8 @@
     VC5.view.backgroundColor = [UIColor purpleColor];
     UINavigationController *naVC5 = [[UINavigationController alloc] initWithRootViewController:VC5];
     [self addChildViewController:naVC5];
+    
+    
 }
 
 - (void)setUpTabBar {
@@ -84,4 +127,5 @@
     childVC5.tabBarItem.selectedImage = [UIImage imageNameWithRenderAsOriginal:@"tabBar_me_click_icon"];
     childVC5.tabBarItem.title = @"我";
 }
+
 @end

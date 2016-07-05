@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIBarButtonItem (item)
-+ (UIBarButtonItem *) itemWithimage:(UIImage *)imageNor highImage:(UIImage *)imageHigh addTarget:(nullable id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
++ (UIBarButtonItem *) itemWithImage:(UIImage *)imageNor highImage:(UIImage *)imageHigh addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
+
++ (instancetype) itemWithImage:(UIImage *)imageNor imageSel:(UIImage *)ImageSel addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
 @end

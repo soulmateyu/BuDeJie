@@ -7,6 +7,7 @@
 //
 
 #import "XMGMineController.h"
+#import "UIBarButtonItem+item.h"
 
 @implementation XMGMineController
 - (void)viewDidLoad {
@@ -15,23 +16,12 @@
     [self setUpNavigationBar];
 }
 - (void)setUpNavigationBar {
-     self.navigationItem.title = @"我的";
-    UIButton *mineMoonBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [mineMoonBtn setImage:[UIImage imageNamed:@"mine-moon-icon"] forState:UIControlStateNormal];
-    [mineMoonBtn setImage:[UIImage imageNamed:@"mine-moon-icon-click"] forState:UIControlStateSelected];
-    [mineMoonBtn addTarget:self action:@selector(mineMoonBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [mineMoonBtn sizeToFit];
-    UIView *moonView = [[UIView alloc] initWithFrame:mineMoonBtn.bounds];
-    [moonView addSubview:mineMoonBtn];
-    UIBarButtonItem *mineMoon = [[UIBarButtonItem alloc] initWithCustomView:moonView];
+    self.navigationItem.title = @"我的";
+    UIBarButtonItem *mineMoon = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-moon-icon"] imageSel:[UIImage imageNamed:@"mine-moon-icon-click"] addTarget:self action:@selector(mineMoonBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *mineSettingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [mineSettingBtn setImage:[UIImage imageNamed:@"mine-setting-icon"] forState:UIControlStateNormal];
-    [mineSettingBtn setImage:[UIImage imageNamed:@"mine-setting-icon-click"] forState:UIControlStateHighlighted];
-    [mineSettingBtn sizeToFit];
-    UIView *settingView = [[UIView alloc] initWithFrame:mineSettingBtn.bounds];
-    [settingView addSubview:mineSettingBtn];
-    UIBarButtonItem *mineSetting = [[UIBarButtonItem alloc] initWithCustomView:settingView];
+    
+    UIBarButtonItem *mineSetting = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] addTarget:self action:@selector(mineSettingClick) forControlEvents:UIControlEventTouchUpInside];
+    
     
     self.navigationItem.rightBarButtonItems = @[mineSetting,mineMoon];
     
@@ -42,5 +32,10 @@
     }else{
     mineMoonBtn.selected = YES;
     }
+    NSLog(@"点击了mineMoonBtnClick");
+}
+
+- (void)mineSettingClick {
+    NSLog(@"点击了mineSettingClick");
 }
 @end
